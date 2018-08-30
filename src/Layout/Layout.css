@@ -1,0 +1,11 @@
+.Layout {
+    padding-top: 180px;
+    background-color: lightgray;
+}
+
+@media (max-width: 820px) {
+    .Layout {
+        margin-top: 160px;
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,11 @@
+Backdrop {
+    z-index: 200;
+    background-color: grey;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

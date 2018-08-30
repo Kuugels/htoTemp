@@ -1,0 +1,27 @@
+.Posts {
+    width: 60%;
+}
+.Post {
+    font-size: 1.2em;
+    height: auto;
+    padding: 30px;
+    box-shadow: 3px 2px 10px black;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.Post p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.Posts img {
+    width: 100px;
+}
+
+@media (max-width: 820px) {
+    .Posts {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
