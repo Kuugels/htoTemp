@@ -5,6 +5,7 @@
 
 color codes
 
+#0f1110 musta mikä vähän vihertää
 
 style={{backgroundImage: "url(" + props.imgSrc + ")"}}
 

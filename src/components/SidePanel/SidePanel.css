@@ -4,8 +4,29 @@
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 0;
+    color: black;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2em;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: darkgrey;
+}
 
 @media (max-width: 820px) {
     .SidePanel {

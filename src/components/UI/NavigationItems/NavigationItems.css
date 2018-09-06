@@ -17,7 +17,7 @@
     margin-left: 3px;
     margin-right: 3px;
     color: black;
-    border: solid black 1px;
+    /*border: solid black 1px;*/
     transition-duration: 0.3s;
 }
 

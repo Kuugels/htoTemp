@@ -12,12 +12,40 @@ import Content from './containers/Content';
 class App extends Component {
     render() {
 
-        const infotest = ["LINKKI LOMAKKEESEEN"];
-        const infotest1 = ["JEKKU!"];
+        const links = [
+            {nimi: "Sodexo ruokalistat", linkki: "https://www.sodexo.fi/metropolia-opiskelijaravintolat"},
+            {nimi: "Oma", linkki: "https://oma.metropolia.fi/"},
+            {nimi: "Lukkarikone", linkki: "https://lukkarit.metropolia.fi/"},
+            {nimi: "Metropolia", linkki: "https://www.metropolia.fi/"}
+        ];
 
-        const infotest3 = ["EI OLE! HÖHÖ!"];
+        const linkListItems = links.map(link => (
+            <a id={link.nimi} href={link.linkki}>
+                <li>{link.nimi}</li>
+            </a>
+        ));
 
-        const opyt = ["METKA", "UIO", "TXO", "Soffa", "Demoni", "MeMO", "ESN-Metropolia", "AGU", "HIV", "MURU", "LEPO", "Tilde", "Trombi"];
+        const opyt = [
+            {nimi: "METKA", linkki: "http://metkaweb.fi/"},
+            {nimi: "UIO", linkki: "http://www.uio.fi/"},
+            {nimi: "TXO", linkki: "https://www.facebook.com/tukholmankatu10"},
+            {nimi: "Soffa", linkki: "http://soffa.edu.metropolia.fi/"},
+            {nimi: "Demoni", linkki: "https://demoniry.fi/"},
+            {nimi: "MeMo", linkki: "https://www.facebook.com/myyrmaenopiskelijat/"},
+            {nimi: "ESN-Metropolia", linkki: "http://esn.metropolia.fi/"},
+            {nimi: "AGU", linkki: "https://www.facebook.com/agricolankadunopiskelijat/"},
+            {nimi: "HIV", linkki: "https://www.facebook.com/hivopy/"},
+            {nimi: "MURU", linkki: "https://www.facebook.com/MURU-ry-133723319305/"},
+            {nimi: "LEPO", linkki: "https://www.facebook.com/Lepory/"},
+            {nimi: "Tilde", linkki: "https://tilde.fi/"},
+            {nimi: "Trombi", linkki: "https://www.trombiry.com/"}
+        ];
+
+        const opyListItems = opyt.map(opy => (
+            <a id={opy.nimi} href={opy.linkki}>
+                <li>{opy.nimi}</li>
+            </a>
+        ));
 
         const yhdistys = () => (
             <InfoPage header="Hallitus 2018">Jeeps eli hallitus on hallitus</InfoPage>
@@ -34,11 +62,7 @@ class App extends Component {
             <div className="App">
                 <Layout>
                     <Content>
-                        <SidePanel>
-                            <InfoPanel infoHeader="Liity jäseneksi tästä!" infoList={infotest}/>
-                            <InfoPanel infoHeader="Jekku Porkkana!" infoList={infotest1}/>
-                            <InfoPanel infoHeader="Toimistokamera" infoList={infotest3}/>
-                        </SidePanel>
+                        
 
                         <Switch>
                             <Route path="/tursajaiset" component={tursajaiset} />
@@ -46,11 +70,6 @@ class App extends Component {
                             <Route path="/opiskelijakulttuuri" component={opk} />
                             <Route path="/" exact component={Posts} />
                         </Switch>
-                        
-                        <SidePanel>
-                            <InfoPanel infoHeader="Opiskelijayhdistykset" infoList={opyt}/>
-                            <InfoPanel infoHeader="Linkkejä!" infoList={infotest3}/>
-                        </SidePanel>
                     </Content>
                 </Layout>
             </div>
@@ -59,3 +78,24 @@ class App extends Component {
 }
 
 export default App;
+
+/**
+ * 
+ * <SidePanel>
+                            <InfoPanel infoHeader="Jäsenyys">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGP_UL8xdB4bt8iWRQuQLqK9FNwBJ7L2buGTMlOF2iS6eQMw/viewform">
+                                    <p>Liity jäseneksi tästä!</p>
+                                </a>
+                            </InfoPanel>
+                            <InfoPanel infoHeader="Toimistokamera"></InfoPanel>
+                            <InfoPanel infoHeader="Opiskelijayhdistykset">
+                                <ul>{opyListItems}</ul>
+                            </InfoPanel>
+                            <InfoPanel infoHeader="Linkkejä!">
+                                <ul>{linkListItems}</ul>
+                            </InfoPanel>
+                        </SidePanel>
+ * 
+ * 
+ * 
+ */

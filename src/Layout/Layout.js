@@ -11,6 +11,18 @@ class Layout extends Component {
         logo: logo
     }
 
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
+    };
+    
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.handleScroll);
+    };
+    
+    handleScroll = (event) => {
+        console.log("o shit we being scrolled booiis");
+    }
+
     sidebarOpenHandler = () => {
         console.log("Jekku jee nyt pitäs vissi semmone sivu jutska aukee tai jotai");
         this.setState({

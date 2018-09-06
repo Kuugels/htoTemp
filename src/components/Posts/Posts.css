@@ -1,18 +1,18 @@
 .Posts {
     width: 60%;
+    margin-left: 20%;
 }
 .Post {
     font-size: 1.2em;
     height: auto;
     padding: 30px;
-    box-shadow: 3px 2px 10px black;
     background-color: white;
+    border: solid black 1px;
     margin-bottom: 30px;
 }
 
 .Post p {
     font-family: 'Open Sans', sans-serif;
-    text-align: justify;
 }
 
 .Posts img {
