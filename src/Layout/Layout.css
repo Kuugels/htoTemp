@@ -1,10 +1,5 @@
 .Layout {
-    padding-top: 180px;
     background-color: white;
-    background-image: url(../assets/hto_logo_green.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%; 
 }
 
 @media (max-width: 820px) {

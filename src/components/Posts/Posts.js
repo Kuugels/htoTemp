@@ -1,36 +1,75 @@
 import React, { Component } from 'react';
 import Post from './Post/Post';
 import './Posts.css';
+import kuve from '../../assets/esileikki.jpg';
+import toinenKuve from '../../assets/valurauta.jpg';
 
 class Posts extends Component {
-    state = {
-
-    }
 
     render() {
         let posts = [];
-        let i;
+        const artikkeli = (
+            <Post imgSrc={kuve}>
+                <div>
+                    <h1>Esileikki S18</h1>
+                    <p>Esileikki on täällä taas! Tapahtuman teeman voitte päätellä upeasta mainosmateriaalistamme, 
+                    mutta mikäli jäät pähkäilemään mitä pukea suosittelemme seuraavaa: Mausta asusi pikkutuhmasti, 
+                    lisää halutessasi yhtälöön haalarit taikka tule ihan omana itsenäsi 
+                    sillä näihin bileisiin kaikki ovat tervetulleita! 
+                    Huomaathan, että palkitsemme illan parhaan asun ja 
+                    järjestämme muuta iltaan sopivia/sopimattomia kilpailuita.
+                    Oletteko valmiita? Me ollaan!</p>
+                    <h4>Mitä: Esileikki Bileet<br/>
+                    Missä: Club Capital<br/>
+                    Milloin: 30.8.2018 kello 21.00 →<br/>
+                    Miksi: Koska me voimme!<br/>
+                    Miten: Pikkutuhmasti, haalareissa taikka ihan miten vain!<br/>
+                    Mitä maksaa: 2€ | Ovelta 5€ (narikka ei sisälly lipun hintaan)</h4>
+                </div>
+            </Post>
+            
+        );
 
-        const article = ["Helsingin Tekniikan Opiskelijat etsii ICT- ja viestintätiimiin kahta henkilöä.",
-            "Tulevassa yhdistyksen kevätkokouksessa valitaan yhdityksen hallitukseen kaksi jäsentä lisää kaudelle 2018. Haku alkaa 28.3.2018 ja päättyy yhdistyksen kevätkokoukseen 12.4.2018. Paikkoja on yksi ICT-tiimissä ja yksi viestintätiimissä.",
-            "Hallituksessa pääset mukaan tekemään HTO:sta entistä parempaa opiskelijayhdistystä, tutustumaan uusiin ihmisiin ja hankkimaan työelämässä arvostettua kokemusta vaikutus- ja edunvalvontatoiminnasta. Edellytyksenä on HTO:n jäsenyys, halu sitoutua toimintaan ja ennakkoluuloton mieli!",
-            "ICT-tiimissä tehtäviisi kuuluu mm. HTO:n kotisivujen päivittäminen ja jäsenrekisterin hallinta. HTML-osaaminen on suuri plussa.",
-            "Viestintätiimissä vastuualueita on somekanavien hallinta ja päivittäminen, tapahtumien markkinointi sekä kommunikointi muiden opiskelijayhdistysten ja toimijoiden kanssa.",
-            "Aiempaa kokemusta järjestötoiminnasta ei tarvitse, mutta siitä voi olla hyötyä. Hakemukset tulee olla lähetettynä osoitteeseen hallitus@htory.fi 12.4.2018 mennessä. Uudet jäsenet valitaan yhdistyksen kevätkokouksessa, joten on toivottavaa että hakijat saapuvat kokoukseen.",
-            "P.S. Vastaamme kysymyksiin pesteistä tai mistä tahansa muusta mielellämme, tulkaa vetämään hihasta jos askarruttaa!"
-        ]
+        const artikkeli1 = (
+            <Post>
+                <div>
+                    <h1>Sivujen uudistus</h1>
+                    <p>Juu elikkäs sivut uudistuu ja tää on tämmöne aika hassu testi artikkeli. 
+                    Testaan täl artikkelil sitä et jos ei oo laittanu kuvaa postauksen kans nii "kansikuvan" tilal
+                    pitäs olla hto logo kuva jutskeli. Ei kait sit muut.</p>
+                    <h4>Heippa saatana</h4>
+                    <h5>:)</h5>
+                </div>
+            </Post>
+            
+        );
 
-        for (i = 0; i < 10; i++) {
-            posts[i] = <Post imgSrc="https://www.htory.fi/images/julkaisumateriaali/hto_logo_green.png"
-                imgAlt={"Kuve" + i}
-                header={"HTO:n hallituksen täydennyshaku " + i}
-                article={article}
-                addedBy="Smuul"
-            />
-        }
+        const artikkeli2 = (
+            <Post imgSrc={toinenKuve}>
+                <h1>Valurauta 2018</h1>
+                <p>
+                Valurauta palaa suurempana kuin koskaan! 
+                Valurauta on jälleen tulossa 14.3.2018 taistelemaan kaamosmasennusta vastaan 
+                rautaisin ottein ja kutsumme juuri teidät mukaan taistelujoukkoihimme!
+                Illan aikana nousee kolme bändiä lavalle, joilla meno ei lopu kesken. Nappaa siis 
+                kaverisi mukaan ja tulkaa nauttimaan kanssamme mahtavasta live-musiikista! Tätä et halua missata!<br/>
+                </p>
+                <h4>
+                Lavalla nähdään:<br/>
+                Edge of Haze [Metal / Progressive / Alternative / Indie]<br/>
+                Astralion [Melodic Power Metal]<br/>
+                Everfrost [Symphonic Power Metal, Melodic Metal]<br/>
+                </h4>
+            </Post>
+        );
+
         return(
             <div className="Posts">
-                {posts}
+                {artikkeli}
+                {artikkeli1}
+                {artikkeli2}
+                {artikkeli1}
+                {artikkeli1}
             </div>
         );
     }

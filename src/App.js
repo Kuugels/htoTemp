@@ -62,8 +62,6 @@ class App extends Component {
             <div className="App">
                 <Layout>
                     <Content>
-                        
-
                         <Switch>
                             <Route path="/tursajaiset" component={tursajaiset} />
                             <Route path="/yhdistys" component={yhdistys} />

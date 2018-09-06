@@ -1,15 +1,16 @@
 .Topbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 170px;
+    height: 60px;
     display: flex;
     justify-content: center;
-    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
 }
 
 .Topbar img {
-    align-self: center;
     padding-right: 20px;
     height: 80%;
 }

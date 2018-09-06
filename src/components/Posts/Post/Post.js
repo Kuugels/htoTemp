@@ -1,16 +1,23 @@
 import React from 'react';
+import hto from '../../../assets/hto1.jpg';
 
-const post = (props) => (
-    <div className="Post">
-        <article>
-            <img src={props.imgSrc} alt={props.imgALt} />
-            <h1>{props.header}</h1>
-            {props.article.map(paragraph => 
-                <p>{paragraph}</p>
-            )}
-            <h6>{props.addedBy}</h6>
-        </article>
-    </div>
-);
+const post = (props) => {
+    let img = null;
+    if (props.imgSrc == null) {
+        img = hto;
+    }else {
+        img = props.imgSrc;
+    }
+    return (
+        <div className="Post">
+            <img className="PostImage" src={img} alt={"Post image"} />
+            <article>
+                {props.children}
+            </article>
+        </div>
+    );
+};
+
+
 
 export default post;
