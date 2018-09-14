@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Post from './Post/Post';
+import CoverImage from '../UI/CoverImage/CoverImage';
 import './Posts.css';
 import kuve from '../../assets/esileikki.jpg';
+import coverImg from '../../assets/hto1.jpg';
 import toinenKuve from '../../assets/valurauta.jpg';
 
 class Posts extends Component {
@@ -37,7 +39,7 @@ class Posts extends Component {
                     <p>Juu elikkäs sivut uudistuu ja tää on tämmöne aika hassu testi artikkeli. 
                     Testaan täl artikkelil sitä et jos ei oo laittanu kuvaa postauksen kans nii "kansikuvan" tilal
                     pitäs olla hto logo kuva jutskeli. Ei kait sit muut.</p>
-                    <h4>Heippa saatana</h4>
+                    <h4>Heippa</h4>
                     <h5>:)</h5>
                 </div>
             </Post>
@@ -64,13 +66,24 @@ class Posts extends Component {
         );
 
         return(
-            <div className="Posts">
-                {artikkeli}
-                {artikkeli1}
-                {artikkeli2}
-                {artikkeli1}
-                {artikkeli1}
+            <div>
+                <CoverImage cover={coverImg}>
+                    <header >
+                        <h1>Helsingin Tekniikan Opiskelijat - HTO ry</h1>
+                        <h3>Opiskelijan asialla, ihmistä vastaan - jo vuodesta 1975</h3>
+                    </header>
+                </CoverImage>
+                <div className="Content">
+                    <div className="Posts">
+                        {artikkeli}
+                        {artikkeli1}
+                        {artikkeli2}
+                        {artikkeli1}
+                        {artikkeli1}
+                    </div>
+                </div>
             </div>
+            
         );
     }
 }

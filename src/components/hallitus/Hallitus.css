@@ -1,0 +1,22 @@
+.Hallitus {
+    font-size: 1.1em;
+}
+
+.HallitusTable {
+    border-spacing: 10px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.HallitusTable td, .HallitusTable th  {
+    min-height: 100px;
+    padding: 5px;
+}
+
+.HallitusTable tr {
+    background-color: whitesmoke
+}
+
+.HallitusTable img {
+    height: 200px;
+}

@@ -1,9 +1,0 @@
-.Content {
-    display: flex;
-}
-
-@media (max-width: 820px) {
-    .Content {
-        flex-wrap: wrap;
-    }
-}

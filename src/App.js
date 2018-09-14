@@ -4,10 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 
 import Layout from './Layout/Layout';
 import Posts from './components/Posts/Posts';
-import InfoPage from './components/InfoPage/InfoPage';
-import InfoPanel from './components/InfoPanel/InfoPanel';
-import SidePanel from './components/SidePanel/SidePanel';
-import Content from './containers/Content';
+import Hallitus from './components/hallitus/Hallitus';
+import Tursajaiset from './components/tursajaiset/Tursajaiset';
+import Opiskelijakulttuuri from './components/opiskelijakulttuuri/opiskelijakulttuuri';
 
 class App extends Component {
     render() {
@@ -18,12 +17,6 @@ class App extends Component {
             {nimi: "Lukkarikone", linkki: "https://lukkarit.metropolia.fi/"},
             {nimi: "Metropolia", linkki: "https://www.metropolia.fi/"}
         ];
-
-        const linkListItems = links.map(link => (
-            <a id={link.nimi} href={link.linkki}>
-                <li>{link.nimi}</li>
-            </a>
-        ));
 
         const opyt = [
             {nimi: "METKA", linkki: "http://metkaweb.fi/"},
@@ -41,34 +34,15 @@ class App extends Component {
             {nimi: "Trombi", linkki: "https://www.trombiry.com/"}
         ];
 
-        const opyListItems = opyt.map(opy => (
-            <a id={opy.nimi} href={opy.linkki}>
-                <li>{opy.nimi}</li>
-            </a>
-        ));
-
-        const yhdistys = () => (
-            <InfoPage header="Hallitus 2018">Jeeps eli hallitus on hallitus</InfoPage>
-        );
-        const opk = () => (
-            <InfoPage header="Opiskelijakulttuuri">Juu kyllä on opiskelijakulttuuri</InfoPage>
-        ); 
-
-        const tursajaiset = () => (
-            <InfoPage header="Tursajaiset">Juu</InfoPage>
-        );
-
         return (
             <div className="App">
                 <Layout>
-                    <Content>
-                        <Switch>
-                            <Route path="/tursajaiset" component={tursajaiset} />
-                            <Route path="/yhdistys" component={yhdistys} />
-                            <Route path="/opiskelijakulttuuri" component={opk} />
-                            <Route path="/" exact component={Posts} />
-                        </Switch>
-                    </Content>
+                    <Switch>
+                        <Route path="/tursajaiset" component={Tursajaiset} />
+                        <Route path="/yhdistys" component={Hallitus} />
+                        <Route path="/opiskelijakulttuuri" component={Opiskelijakulttuuri} />
+                        <Route path="/" exact component={Posts} />
+                    </Switch>
                 </Layout>
             </div>
         );
@@ -76,24 +50,3 @@ class App extends Component {
 }
 
 export default App;
-
-/**
- * 
- * <SidePanel>
-                            <InfoPanel infoHeader="Jäsenyys">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGP_UL8xdB4bt8iWRQuQLqK9FNwBJ7L2buGTMlOF2iS6eQMw/viewform">
-                                    <p>Liity jäseneksi tästä!</p>
-                                </a>
-                            </InfoPanel>
-                            <InfoPanel infoHeader="Toimistokamera"></InfoPanel>
-                            <InfoPanel infoHeader="Opiskelijayhdistykset">
-                                <ul>{opyListItems}</ul>
-                            </InfoPanel>
-                            <InfoPanel infoHeader="Linkkejä!">
-                                <ul>{linkListItems}</ul>
-                            </InfoPanel>
-                        </SidePanel>
- * 
- * 
- * 
- */

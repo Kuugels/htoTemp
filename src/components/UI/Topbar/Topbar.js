@@ -13,12 +13,3 @@ const topBar = (props) => {
 }
 
 export default topBar;
-/*
-
-<img onClick={props.openMenu} src={props.logo} alt="HTO Logo" />
-
-<header >
-                    <h1>Helsingin Tekniikan Opiskelijat - HTO ry</h1>
-                    <h3>Insinöörin asialla, ihmistä vastaan - jo vuodesta 1975</h3>
-                </header>
-*/

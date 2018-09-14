@@ -5,8 +5,7 @@ const infoPage = (props) => {
     return (
         <div className="InfoPage">
             <article>
-                <h1>{props.header}</h1>
-                <p>{props.children}</p>
+                {props.children}
             </article>
         </div>
     );
