@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from '../components/UI/Sidebar/Sidebar';
 import Topbar from '../components/UI/Topbar/Topbar';
+import Footer from '../components/UI/Footer/Footer';
 import logo from '../assets/hto_logo_green.svg';
 import menu_logo from '../assets/hto_menu.svg';
 import './Layout.css';
@@ -28,6 +29,7 @@ class Layout extends Component {
                     <main>
                         {this.props.children}
                     </main>
+                    <Footer />
                 </div>
         );
     }
